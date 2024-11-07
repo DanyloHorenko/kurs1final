@@ -38,6 +38,10 @@
       background: $bg-color;
       padding: 30px;
       line-height: 1.2;
+      a {
+        display: flex;
+        align-items: center;
+      }
     }
   
     &__inner-bread {
@@ -50,7 +54,7 @@
     }
     
     &__inner-galka {
-      display: block;
+
       svg {
         width: 12px;
         height: 12px;
