@@ -1,0 +1,35 @@
+.trust {
+
+    &__container {
+
+    }
+
+    &__title {
+    color: $main-color;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0 0 30px 0;
+    text-align: center;
+    }
+
+    &__cards {
+      display: flex;
+    }
+
+    &__cards-card {
+      position: relative;
+      background: #1C4280;
+    }
+
+    &__cards-card::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        height: 120px;
+        background: #1C4280 url("../img/hillel.png") no-repeat center;
+    }
+}

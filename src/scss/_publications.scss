@@ -1,0 +1,84 @@
+.publications {
+  padding: 30px 0 0 0;
+  background: $bg-color;
+
+    &__container{
+
+    }
+
+    &__head {
+
+        padding: 0 0 30px;
+
+        a {
+            color: $regular-color;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0 0 5px;
+
+            @media screen and (min-width: $breakpoint-md) {
+            padding: 0 0 10px;
+            }
+        }
+
+        h2 {
+            @include gradient-text($gradient-red-text);
+            font-size: 30px;
+            font-weight: 700;
+            @media screen and (min-width: $breakpoint-md) {
+                font-size: 38px;
+            }
+        }
+
+    }
+    
+    &__tell {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media screen and (min-width: $breakpoint-md){
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+    }
+
+    &__tell-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        align-self: stretch;
+        padding: 30px;
+        background: #FFF;
+    }
+
+    &__tell-what {
+       p {
+        font-size: 16px;
+        font-weight: 700;
+        color: $regular-color;
+       }
+       p+p {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color:$text-color;
+       }
+       div {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        color: #000;
+        border-top: 4px solid $separator-color;
+        padding-top: 15px;
+       }
+       @media screen and (min-width: $breakpoint-md) {
+        flex: 1 1 45%;
+       }
+    }
+
+}
