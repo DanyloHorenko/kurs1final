@@ -1,0 +1,87 @@
+.footer {
+    background: $bg-color;
+    padding: 30px 0 30px 0;
+
+    &__container {
+
+    }
+    &__box {
+        border-top: 2px solid $separator-color;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+       /* align-items: center; */
+        text-align: center; 
+        @media screen and (min-width: $breakpoint-md) {
+        flex-direction: column;
+        div, p {
+        flex-direction: row;
+        }           
+        }
+    }
+
+    &__social {
+        svg {
+            width: 38px;
+            height: 38px;
+            fill: $regular-color;
+          }
+    }
+
+    &__box-adress {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        @media screen and (min-width: $breakpoint-md) {
+            flex-direction: row;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            color: $main-color;
+        }
+
+        a {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $regular-color;
+        }
+
+    }
+
+    &__box-contact {
+        padding: 21px 0 30px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        @media screen and (min-width: $breakpoint-md) {
+            flex-direction: row;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 700;
+            color: $alt-color;
+        }
+ 
+    }
+
+    &__social-gmail {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 700;
+        color: $regular-color;
+    }
+
+    &__box-company {
+        font-size: 16px;
+        font-weight: 400;
+        color: $text-color;
+    }
+
+}
