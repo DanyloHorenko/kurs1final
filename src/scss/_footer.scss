@@ -5,18 +5,17 @@
     &__container {
 
     }
+
     &__box {
+        display: grid;
+        grid-template-columns: 1fr;
+
         border-top: 2px solid $separator-color;
         padding-top: 30px;
-        display: flex;
-        flex-direction: column;
-       /* align-items: center; */
-        text-align: center; 
+        //text-align: center;
+
         @media screen and (min-width: $breakpoint-md) {
-        flex-direction: column;
-        div, p {
-        flex-direction: row;
-        }           
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -30,11 +29,12 @@
 
     &__box-adress {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         gap: 10px;
         align-items: center;
+
         @media screen and (min-width: $breakpoint-md) {
-            flex-direction: row;
+            justify-content: flex-start;
         }
 
         p {
@@ -50,7 +50,6 @@
             text-transform: uppercase;
             color: $regular-color;
         }
-
     }
 
     &__box-contact {
@@ -59,6 +58,8 @@
         flex-direction: column;
         gap: 10px;
         align-items: center;
+        grid-column: 1 / -1;
+
         @media screen and (min-width: $breakpoint-md) {
             flex-direction: row;
         }
@@ -68,7 +69,6 @@
             font-weight: 700;
             color: $alt-color;
         }
- 
     }
 
     &__social-gmail {
@@ -82,6 +82,12 @@
         font-size: 16px;
         font-weight: 400;
         color: $text-color;
-    }
+        margin: 0 auto;
+        grid-row: 3;
 
+        @media screen and (min-width: $breakpoint-md) {
+            grid-row: auto;
+            margin-right: 0;
+        }
+    }
 }

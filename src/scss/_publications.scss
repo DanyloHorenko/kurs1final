@@ -2,9 +2,6 @@
   padding: 30px 0 0 0;
   background: $bg-color;
 
-    &__container{
-
-    }
 
     &__head {
 
@@ -52,6 +49,7 @@
         gap: 15px;
         padding: 30px;
         background: #FFF;
+        flex-grow: 1;
 
         div {
             border-top: 4px solid $separator-color;
@@ -61,15 +59,19 @@
     }
 
     &__tell-what {
+        display: flex;
+        flex-direction: column;
        
         img {
             object-fit: cover;
         }
+
        p {
         font-size: 16px;
         font-weight: 700;
         color: $regular-color;
        }
+
        p+p {
         font-size: 12px;
         font-weight: 700;
@@ -77,6 +79,7 @@
         text-transform: uppercase;
         color:$text-color;
        }
+
        div {
         font-size: 14px;
         font-weight: 400;
